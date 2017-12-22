@@ -1,10 +1,60 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+
+    {% block styles %}
+
+        {% bootstrap_css %}
+
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    {% endblock %}
+
+
 </head>
 <body>
+
+    {% block content %}
+
+        {{ block.super }}
+
+            <div class="container-fluid" id="top-div" style="background-image: url({% static 'images/port.jpg' %});">
+
+                {% include 'navbar.html' %}
+
+                <div id="top">
+
+                    <h1> Full-Stack Web & Software Developer </h1>
+
+                    <br>
+
+                    <p style="">
+                        Hey, I'm a software developer from Nairobi, Kenya. I can help you build your next product. I design, build operate and sometimes rescue web applications
+                    </p>
+
+                    <p>
+                        If you are a business seeking web prescense or an employer looking to hire, you can get in touch with me here.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        <a href="" class="btn btn-default" id="need"> I need a website <i class="glyphicon glyphicon-chevron-right"></i> </a>
+
+                        <a href="" class="btn btn-default" id="hire"> I'm looking to hire <i class="glyphicon glyphicon-chevron-right"></i> </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+    {% endblock %}
 
 <h2> Heloo citizens </h2>
 
