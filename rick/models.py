@@ -12,3 +12,22 @@ class Tag(models.Model):
         return self.name
 
 
+class Project(models.Model):
+
+    name = models.CharField(max_length=250)
+
+    screenshots = models.ImageField(upload_to='screenshots/', blank=True)
+
+    about = models.TextField(blank=True)
+
+    tech = models.TextField(blank=True)
+
+    resources = models.TextField(blank=True)
+
+    deployed_site = models.URLField(blank=True)
+
+    github_repo = models.URLField(blank=True)
+
+    def __str__(self):
+
+        return self.name
