@@ -1,0 +1,99 @@
+#top-div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin-top: 0px;
+}
+
+#need {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+#hire {
+    color: white;
+    background-color: #888888;
+    border-color: #888888;
+}
+
+#top {
+    margin: 16%;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+h2 {
+    color: gainsboro;
+}
+
+#nav {
+    background-color: transparent;
+    border: none;
+    margin-top: 10px;
+    color: white;
+}
+
+#projects {
+    background-color: black;
+    color: #777777;
+}
+
+body {
+    background-color: black;
+}
+
+#screenshot {
+    height: 250px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#visit {
+    background-color: lightseagreen;
+    color: white;
+    border-color: lightseagreen;
+}
+
+#project-info {
+    font-size: 15px;
+    color: #888888;
+}
+
+#contact {
+    margin: 12%;
+    font-size: 15px;
+    color: #888888;
+}
+
+#facebook {
+    background-color: blue;
+    border-color: blue;
+    color: white;
+    text-align: center;
+}
+
+#linkedin {
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+    color: white;
+    text-align: center;
+}
+
+#github {
+    background-color: #333333;
+    color: white;
+    border-color: #333333;
+    text-align: center;
+}
+
+#fill {
+    background-color: #777777;
+    color: white;
+    text-align: center;
+    border-color: #333333;
+}
