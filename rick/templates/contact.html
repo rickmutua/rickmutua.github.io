@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    {% block styles %}
+
+        {% bootstrap_css %}
+
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    {% endblock %}
+
+</head>
+<body>
+
+    {% block content %}
+
+        {{ block.super }}
+
+                <div id="loader-wrapper">
+
+                    <div id="loader"></div>
+                    s
+                    <div class="loader-section section-left"></div>
+
+                    <div class="loader-section section-right"></div>
+
+                </div>
+
+
+            {% include 'navbar.html' %}
+
+                <div class="container" id="contact">
+
+                    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+
+                        <div class="col-sm-10 col-md-10 col-lg-10">
+
+                            <h2> Get in touch </h2>
+
+                            <br>
+
+                            <p> Wanna get in touch or talk to me about a project? </p>
+
+                            <p> Just fill the form below or send me an email to <a href="rick.mutua12@gmail.com">rick.mutua12@gmail.com</a> and lets talk. </p>
+
+                            <br>
+
+                            <div>
+
+                                <a href="https://goo.gl/forms/PH6fRCUdMY1FwixK2" class="btn btn-default" id="fill"> FILL THIS FORM </a>
+
+                            </div>
+
+                            <br> <br>
+
+                            <p> Let's get social? Follow my online profiles on Facebook, LinkedIn and Github. </p>
+
+                            <br>
+
+                            <div>
+
+                                <p>
+                                    <a href="" class="btn btn-default" id="facebook"> <i class="fa fa-facebook" aria-hidden="true"></i> FACEBOOK </a>
+                                    <a href="https://www.linkedin.com/in/erick-mutua-a46566146" class="btn btn-default" id="linkedin"> <i class="fa fa-linkedin" aria-hidden="true"></i> LINKEDIN </a>
+                                    <a href="https://github.com/rickmutua" class="btn btn-default" id="github"> <i class="fa fa-github" aria-hidden="true"></i> GITHUB </a>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+
+                </div>
+
+
+    {% endblock %}
+
+    {% block scripts %}
+
+        {{block.super}}
+
+            <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+    {% endblock %}
+
+
+</body>
+</html>
