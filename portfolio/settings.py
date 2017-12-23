@@ -76,6 +76,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
+# GeoDjango fixes
+GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
+GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
+
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
