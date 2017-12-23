@@ -14,11 +14,15 @@ class Tag(models.Model):
 
 class Project(models.Model):
 
+    tags = models.ManyToManyField(Tag)
+
     name = models.CharField(max_length=250)
 
     screenshots = models.ImageField(upload_to='screenshots/', blank=True)
 
     about = models.TextField(blank=True)
+
+    tech_sheet = models.TextField(blank=True)
 
     tech = models.TextField(blank=True)
 
