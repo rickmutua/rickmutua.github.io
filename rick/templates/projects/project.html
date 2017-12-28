@@ -100,12 +100,32 @@
 
                             <div class="panel body">
 
-                                <a href="{% url 'project' project.name %}">
+                                <div class="cover">
+
+                                    <a href="{% url 'project' project.name %}">
 
                                     <img src="{{ project.screenshots.url }}" alt="image" class="img-responsive"
                                          id="screenshot">
 
+                                    <div class="overlay">
+
+                                        <div class="text">
+
+                                            {% for tag in tags %}
+
+                                                <a href="" class="btn btn-default"
+                                                    style="background-color: #333333; color: #888888; border-color: #333333"> {{ tag.name }}
+                                                </a>
+
+                                            {% endfor %}
+
+                                        </div>
+
+                                    </div>
+
                                 </a>
+
+                                </div>
 
                             </div>
 

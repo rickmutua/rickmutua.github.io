@@ -35,7 +35,9 @@ def single_project(requests, project_name):
 
         project = Project.objects.get(name=project_name)
 
-        return render(requests, 'projects/project-info.html', {'project': project})
+        tags = Tag.objects.filter(name=project_name).all()
+
+        return render(requests, 'projects/project-info.html', {'project': project, 'tags': tags})
 
     except ObjectDoesNotExist:
 
