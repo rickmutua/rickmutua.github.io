@@ -71,7 +71,6 @@ body {
 
 .text {
   white-space: nowrap;
-  color: white;
   font-size: 20px;
   position: absolute;
   overflow: hidden;
@@ -82,12 +81,12 @@ body {
 }
 
 .cover:hover #screenshot {
-  opacity: 0.3;
+  opacity: 1;
 }
 
 .cover:hover .overlay {
-  bottom: 0;
-  height: 100%;
+    bottom: 0;
+    height: 100%;
 }
 
 #visit {
