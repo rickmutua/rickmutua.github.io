@@ -53,3 +53,20 @@ def contact(request):
     except ObjectDoesNotExist:
 
         raise Http404()
+
+
+def tag(request, tag_name):
+
+    try:
+
+        tags = Tag.objects.filter().all()
+
+        tag = Tag.objects.get(name=tag_name)
+
+        projects = Project.objects.filter(tags=tag).all().order_by('-id')
+
+        return render(request, 'tag.html', {'tag': tag, 'projects': projects, 'tags': tags})
+
+    except ObjectDoesNotExist:
+
+        raise Http404(' Sorry, Tag not found, please try again')

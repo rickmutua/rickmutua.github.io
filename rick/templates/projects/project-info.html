@@ -99,11 +99,30 @@
                     <p> {{ project.tech|linebreaks }}</p>
 
 
+                    {% endif %}
+
+
                 <h2> Resources </h2>
+
+                    {% if project.deployed_site %}
 
                     <p> The project is online at <a href="{{ project.deployed_site }}" target="_blank">{{ project.deployed_site }}</a> </p>
 
-                {% endif %}
+                    {% else %}
+
+                    <p> This application isn't deployed yet </p>
+
+                    {% endif %}
+
+                    {% if project.github_repo %}
+
+                     <p> Access this project's code on it's <a href="{{ project.github_repo }}" target="_blank"> GITHUB PAGE </a> </p>
+
+                    {% else %}
+
+                    {% endif %}
+
+
 
                 </div>
 

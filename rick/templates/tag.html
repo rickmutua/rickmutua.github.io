@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    {% block styles %}
+
+        {% bootstrap_css %}
+
+        <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    {% endblock %}
+
+</head>
+<body>
+
+    {% block content %}
+
+        {{ block.super }}
+
+            <div id="loader-wrapper">
+
+                <div id="loader"></div>
+
+                <div class="loader-section section-left"></div>
+
+                <div class="loader-section section-right"></div>
+
+            </div>
+
+    <div class="container-fluid" id="projects">
+
+        {% include 'navbar.html' %}
+
+        <div class="container">
+
+            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+
+            <div class="col-sm-10 col-md-10 col-lg-10">
+
+                <br>
+                <br>
+
+                <h2> Projects </h2>
+
+                <p>
+                    From Web Components and UX design to Django and Python, checkout my latest web projects.
+                </p>
+
+                <br>
+
+                    {% for tag in tags %}
+
+                    <a href="{% url 'single-tag' tag.name %}" class="btn btn-default"
+                       style="background-color: #333333; color: #888888; border-color: #333333"> {{ tag.name }} </a>
+
+                    {% endfor %}
+
+                <br> <br>
+
+                <p> Showing projects under {{ tag.name }} </p>
+
+                <br> <br>
+
+                <div class="row">
+
+                    {% for project in projects %}
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+
+                        <div class="panel panel-default" style="background-color: #777777">
+
+                            <div class="panel heading" style="background-color: gainsboro">
+
+                                <p>
+
+                                    <i class="fa fa-times-circle" style="color: red" aria-hidden="true"></i>
+
+                                    <i class="fa fa-window-minimize-circle" style="color: yellow"
+                                       aria-hidden="true"></i>
+
+                                    <i class="fa fa-window-maximize" aria-hidden="true"></i>
+
+                                <h4 style="text-align: center"> {{ project.name }} </h4>
+
+                                </p>
+
+                            </div>
+
+                            <a href="{% url 'project' project.name %}">
+
+                            <div class="panel body">
+
+                                <div class="cover">
+
+                                    <a href="{% url 'project' project.name %}">
+
+                                        <img src="{{ project.screenshots.url }}" alt="image" class="img-responsive"
+                                            id="screenshot">
+
+                                    </a>
+
+
+
+
+                                    <div class="overlay" style="background-image: url({% static 'images/back.jpg' %});">
+
+                                        <div class="text" style="text-align: center">
+
+                                            {% for tag in tags %}
+
+                                                <div class="btn btn-default"
+                                                    style="background-color: #333333; color: #888888; border-color: #333333"> {{ tag.name }}
+                                                </div>
+
+                                            {% endfor %}
+
+                                            <br> <br> <br>
+
+
+                                            <a href="{% url 'project' project.name %}" class="btn btn-default"
+                                               style="background-color: #333333; color: #888888; border-color: #333333;"> more..
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    {% endfor %}
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+
+
+    </div>
+
+    {% endblock %}
+
+    {% endblock %]
+
+    {% block scripts %}
+
+        {{block.super}}
+
+            <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+    {% endblock %}
+
+</body>
+</html>
