@@ -2,7 +2,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    margin-top: 0px;
 }
 
 #need {
@@ -24,10 +23,12 @@
 h1 {
     font-size: 60px;
     font-weight: bold;
+    font-family: fantasys;
 }
 
 h2 {
     color: gainsboro;
+    font-family: fantasys;
 }
 
 #nav {
@@ -35,6 +36,7 @@ h2 {
     border: none;
     margin-top: 10px;
     color: white;
+    font-family: fantasys;
 }
 
 #projects {
@@ -44,6 +46,10 @@ h2 {
 
 body {
     background-color: black;
+}
+
+.btn {
+    font-family: fantasys;
 }
 
 #screenshot {
@@ -132,4 +138,11 @@ body {
     color: white;
     text-align: center;
     border-color: #333333;
+}
+
+#more-info {
+    height: 420px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
