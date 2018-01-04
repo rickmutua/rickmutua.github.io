@@ -29,15 +29,15 @@
 
         {{ block.super }}
 
-            <div id="loader-wrapper">
+            <!--<div id="loader-wrapper">-->
 
-                <div id="loader"></div>
+                <!--<div id="loader"></div>-->
 
-                <div class="loader-section section-left"></div>
+                <!--<div class="loader-section section-left"></div>-->
 
-                <div class="loader-section section-right"></div>
+                <!--<div class="loader-section section-right"></div>-->
 
-            </div>
+            <!--</div>-->
 
             <div class="container" id="project-info">
 
@@ -62,32 +62,12 @@
 
                 <br> <br>
 
-                    <div class="panel panel-default" style="background-color: #777777">
+                    <img src="{{ project.screenshots.url }}" alt="image" class="img-responsive" id="more-info">
 
-                        <div class="panel heading" style="background-color: gainsboro">
 
-                            <p>
+                <h2> Description </h2>
 
-                                <i class="fa fa-times-circle" style="color: red" aria-hidden="true"></i>
-
-                                <i class="fa fa-window-minimize-circle" style="color: yellow" aria-hidden="true"></i>
-
-                                <i class="fa fa-window-maximize" aria-hidden="true"></i>
-
-                                <h4 style="text-align: center"> {{ project.name }} </h4>
-
-                            </p>
-
-                        </div>
-
-                        <div class="panel body">
-
-                            <img src="{{ project.screenshots.url }}" alt="image" class="img-responsive" id="more-info">
-
-                        </div>
-
-                    </div>
-
+                    <p> {{ project.description }} </p>
 
                 <h2> Technical Sheet </h2>
 
@@ -96,27 +76,28 @@
 
                 <h2> Technologies </h2>
 
-                    <p> {{ project.tech|linebreaks }}</p>
+                    <p style="list-style-type: circle; padding-left: 5px; font-family: fantasy;"> {{ project.tech|linebreaks }}</p>
 
 
                     {% endif %}
 
-
-                <h2> Resources </h2>
 
                     {% if project.deployed_site %}
 
-                    <p> The project is online at <a href="{{ project.deployed_site }}" target="_blank">{{ project.deployed_site }}</a> </p>
+                        <h2> Resources </h2>
+
+                        <p> The project is online at <a href="{{ project.deployed_site }}" target="_blank">{{ project.deployed_site }}</a> </p>
 
                     {% else %}
 
-                    <p> This application isn't deployed yet </p>
-
                     {% endif %}
+
 
                     {% if project.github_repo %}
 
-                     <p> Access this project's code on it's <a href="{{ project.github_repo }}" target="_blank"> GITHUB PAGE </a> </p>
+                        <h2> Resources </h2>
+
+                        <p> Access this project's code on it's <a href="{{ project.github_repo }}" target="_blank"> GITHUB PAGE </a> </p>
 
                     {% else %}
 

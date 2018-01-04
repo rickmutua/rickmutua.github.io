@@ -18,9 +18,13 @@ class Project(models.Model):
 
     name = models.CharField(max_length=250)
 
+    icon = models.ImageField(upload_to='icons/')
+
     screenshots = models.ImageField(upload_to='screenshots/', blank=True)
 
     about = models.TextField(blank=True)
+
+    description = models.TextField(blank=True)
 
     tech_sheet = models.TextField(blank=True)
 
