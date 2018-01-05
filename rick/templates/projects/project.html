@@ -23,7 +23,7 @@
     {% endblock %}
 
 </head>
-<body>
+<body background="/images/niki.jpg">
 
     {% block content %}
 
@@ -39,9 +39,11 @@
 
             <!--</div>-->
 
-    <div class="container-fluid" id="projects">
+    <div class="container-fluid" id="projects" style="background-image: url({% static 'images/niki.jpg' %});">
 
-        {% include 'navbar.html' %}
+        <div id="project">
+
+            {% include 'navbar.html' %}
 
         <div class="container">
 
@@ -122,6 +124,8 @@
 
         <div class="col-sm-1 col-md-1 col-lg-1"></div>
 
+
+        </div>
 
     </div>
 
