@@ -22,9 +22,13 @@ p {
     font-family: "Times New Roman", Times, serif;
 }
 h2 {
-    color: #888888;
+    color: white;
     font-weight: bold;
     font-family: fantasys;
+}
+
+h3 {
+    color: #888888;
 }
 
 h4 {
@@ -36,8 +40,8 @@ h4 {
     background-color: transparent;
     border: none;
     margin-top: 10px;
-    color: white;
     font-family: fantasys;
+    font-weight: bold;
 }
 
 body {
@@ -161,4 +165,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 20pt;
+}
+
+#icons {
+    width: 200px;
+    height: 100px;
 }
