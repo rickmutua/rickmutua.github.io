@@ -1,7 +1,9 @@
 #top-div {
+    background-repeat:no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
 }
 
 #top {
@@ -43,12 +45,10 @@ body {
     color: white;
     background-image:url('/static/images/niki.jpg');
     background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    -webkit-background-size: 100%;
-    -khtml-background-size: 100%; /* Konqueror 3.5.4 */
-    -moz-border-image: url(mtn.jpg) 0;
 }
 
 .btn {
@@ -61,13 +61,11 @@ body {
 }
 
 #projects {
-    background-repeat: no-repeat;
-    background-size:100%;
-    -moz-background-size: 100%; /* Gecko 1.9.2 (Firefox 3.6) */
-    -o-background-size: 100%; /* Opera 9.5 */
-    -webkit-background-size: 100%; /* Safari 3.0 */
-    -khtml-background-size: 100%; /* Konqueror 3.5.4 */
-    -moz-border-image: url(mtn.jpg) 0;
+    background-repeat:no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #screenshot {
